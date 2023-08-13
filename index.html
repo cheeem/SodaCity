@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SodaCity</title>
+</head>
+<body>
+
+    <nav> 
+        <a id="logo" href="#"> <img src="./img/yippee.png" /> </a>
+        <ul> 
+            <li> <a href="#"> <p> Stuff </p> </a> </li>
+            <li> <a href="#"> <p> About Me :3 </p> </a> </li>
+            <li> <a href="#"> <p> Reach Out </p> </a> </li>
+        </ul>
+    </nav>
+
+    <main> 
+
+        <article id="work"> 
+
+            <h1> My Work </h1>
+
+            <ul> 
+
+                <li class="card"> 
+                    <img src="img\IMG_5984.jpg" /> 
+                    <div class="content"> 
+                        <h5> This is a title </h5>
+                        <p> Here is a short description of why I love this photo in particular because I just love things and they're so awesome like that yknow how it is anyways like and subscribe for more content JUST LIKE THIS....... </p>
+                    <div> 
+                </li>
+    
+                <li class="card"> 
+                    <img src="img\IMG_6100.jpg" /> 
+                    <div class="content"> 
+                        <h5> This is a title </h5>
+                        <p> Here is a short description of why I love this photo in particular because I just love things and they're so awesome like that yknow how it is anyways like and subscribe for more content JUST LIKE THIS....... </p>
+                    <div> 
+                </li>
+    
+                <li class="card"> 
+                    <img src="img\IMG_6036.jpg" /> 
+                    <div class="content"> 
+                        <h5> This is a title </h5>
+                        <p> Here is a short description of why I love this photo in particular because I just love things and they're so awesome like that yknow how it is anyways like and subscribe for more content JUST LIKE THIS....... </p>
+                    <div> 
+                </li>
+
+            </ul>
+
+        </article>
+
+    </main>
+    
+</body>
+</html>
+
+<script defer> 
+
+    // document.querySelector("#logo").addEventListener("click", () => {
+    //     const sound = new Audio("./audio/yippee");
+    //     sound.play();
+    //     sound.currentTime = 0;
+    // })
+
+</script> 
+
+<style>
+
+    * {
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0;
+
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: black;
+    }
+
+    :root {
+        --side-padding: 7.5rem;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        position: relative; 
+
+        background-color: white;
+    }
+
+    main {
+        padding: 0 var(--side-padding);
+    }
+
+    article {
+        margin: 7.5rem 0;
+    }
+
+    h1 {
+        font-size: 5rem;
+
+        margin: 0 0 3rem 0;
+    }
+
+    #work ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4em;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        width: 20em;
+
+        padding: 1.5em;
+
+        border-radius: 1em;
+        box-shadow: 0 0 0.5em hsl(0, 0%, 0%, 0.2);
+    }
+
+    .card img {
+        border-radius: 1em;
+    }
+
+    .card .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    .card .content h5 {        
+        font-size: 1.25em;
+    }
+
+    nav {
+        position: sticky;
+        top: 0; 
+
+        display: flex;
+        justify-content: space-between;
+
+        padding: 0 var(--side-padding); 
+
+        width: 100%;
+
+        background-color: hsla(0, 100%, 70%, 1);
+
+        --nav-padding-top: 1.5em;
+        --nav-text-color: white;
+    }
+
+    #logo {
+        width: 2.5em;
+
+        padding: var(--nav-padding-top) 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 2.5em;
+
+        list-style: none;
+    }
+
+    nav li {
+        position: relative;
+
+        padding: var(--nav-padding-top) 0em;
+    }
+
+    nav li::after {
+        position: absolute;
+        left: 0;
+        bottom: 2em;
+
+        width: 0;
+        height: 0.1em;
+
+        content: "";
+
+        background-color: var(--nav-text-color);
+
+        transition: width 0.3s ease;
+    }
+
+    nav li:hover::after {
+        width: 100%;
+    }
+
+    nav li a {
+        display: grid;
+        place-items: center;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    nav li a p {
+        color: var(--nav-text-color);
+    }
+    
+</style>
