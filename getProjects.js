@@ -2,12 +2,31 @@ import fs from 'fs';
 
 const projects = [];
 
-fs.readdirSync('./img/Projects').forEach(projectName => {
-    const images = fs.readdirSync(`./img/Projects/${projectName}`);
+let fileContents = `import type { Project } from "./main.ts";\n`;
+
+fs.readdirSync('./img/Projects').forEach(project => {
+    const images = fs.readdirSync(`./img/Projects/${project}`);
     projects.push({
-        name: projectName,
+        name: project,
         images,
+    })
+});
+
+projects.forEach(project => {
+    project.images.forEach(image => {
+        fileContents += `import ${image.split('.')[0]} from '../img/Projects/${project.name}/${image}';\n`;
     });
 });
 
-fs.writeFileSync('./src/projects.ts', `import type { Project } from "./main.ts";\nexport default ${JSON.stringify(projects)} satisfies Project[]`);
+fileContents += `export default [${
+projects
+    .map(project => 
+        `
+    { 
+        name: "${project.name}", 
+        images: [${project.images.map(image => image.split('.')[0]).join(', ')}]
+    }`).join(",")}\n] satisfies Project[];`;
+
+console.log(fileContents);
+
+fs.writeFileSync('./src/projects.ts', fileContents);

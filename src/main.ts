@@ -1,33 +1,40 @@
-
 import projects from './projects.ts';
 
 export type Project = {
     name: string,
-    images: string[],
+    images: any[],
 }
 
-let projectsInnerHtml: string = ``;
+loadProjects(projects);
 
-for(let i = 0; i < projects.length; i++) {
+async function loadProjects(projects: Project[]) {
 
-    const images = projects[i].images;
+    let projectsInnerHtml: string = ``;
 
-    for(let j = 0; j < images.length; j++) {
-        
-        projectsInnerHtml += `
-            <li> 
-                <img src="/img/Projects/${projects[i].name}/${images[j]}" /> 
-                <div class="content"> 
-                    <h5> ${projects[i].name} </h5>
-                <div> 
-            </li>
-        `;
+    for(let i = 0; i < projects.length; i++) {
 
+        const images = projects[i].images;
+    
+        for(let j = 0; j < images.length; j++) {
+                
+            projectsInnerHtml += `
+                <li> 
+                    <img src="${images[j]}" alt=${projects[i].name} /> 
+                    <div class="content"> 
+                        <h5> ${projects[i].name} </h5>
+                    <div> 
+                </li>
+            `;
+    
+        }
+    
     }
+    
+    document.querySelector('#projects')!.innerHTML = projectsInnerHtml;
 
 }
 
-document.querySelector('#projects')!.innerHTML = projectsInnerHtml;
+
 
 
 
