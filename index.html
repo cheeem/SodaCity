@@ -15,7 +15,7 @@
         <nav> 
             <a id="logo" href="#"> <img src=".//img/Misc/yipee.png" loading="lazy" /> </a>
             <ul> 
-                <li> <a href="#mywork"> <p> Stuff </p> </a> </li>
+                <li> <a href="#mywork"> <p> Projects </p> </a> </li>
                 <li> <a href="#aboutme"> <p> About Me :3 </p> </a> </li>
                 <li> <a href="#contact"> <p> Reach Out </p> </a> </li>
             </ul>
@@ -35,7 +35,8 @@
         
                 width: 100%;
         
-                background-color: hsla(0, 100%, 70%, 1);
+                /* background-color: hsla(0, 100%, 70%, 1); */
+                background-color: black;
         
                 --nav-padding-top: 1.5em;
                 --nav-text-color: white;
@@ -104,14 +105,7 @@
                 padding: 0;
 
                 font-family: 'Poppins', sans-serif;        
-                text-decoration: none;
-                list-style: none;
                 font-weight: 600;
-                color: black;
-            }
-
-            :root {
-                --side-padding: 7.5rem;
             }
 
             html, body {
@@ -126,6 +120,8 @@
                 position: relative; 
 
                 background-color: white;
+
+                --side-padding: 7.5rem;
             }
 
             main {
@@ -133,13 +129,22 @@
             }
 
             article {
-                padding: 4.5rem 0;
+                padding: 6.5rem 0;
             }
 
             h1 {
                 margin-bottom: 3rem;
 
                 font-size: 5rem;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
             }
 
         </style>
@@ -269,7 +274,7 @@
 
                 .contacts li {
                     display: flex;
-                    font-size: 1.5em;
+                    font-size: 1.75em;
                 }
 
                 .contacts li a {
