@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="/yipee.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
     <body>
 
         <nav> 
-            <a id="logo" href="#"> <img src="./img/yippee.png" /> </a>
+            <a id="logo" href="#"> <img src="./img/Misc/yipee.png" /> </a>
             <ul> 
                 <li> <a href="#mywork"> <p> Stuff </p> </a> </li>
                 <li> <a href="#aboutme"> <p> About Me :3 </p> </a> </li>
@@ -149,62 +150,18 @@
 
                 <h1> My Work </h1>
 
-                <ul class="cards"> 
-
-                    <li> 
-                        <img src="img\IMG_5984.jpg" /> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-        
-                    <li> 
-                        <img src="img\IMG_6100.jpg" /> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-        
-                    <li> 
-                        <img src="img\IMG_6036.jpg" /> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-
-                    <li> 
-                        <img src="img\IMG_6114.jpg" /> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-        
-                    <li> 
-                        <img src="img\IMG_6124.png" /> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-
-                    <li> 
-                        <img src="img\IMG_6125.jpg"/> 
-                        <div class="content"> 
-                            <h5> This is a title </h5>
-                        <div> 
-                    </li>
-
-                </ul>
+                <ul id="projects"> </ul>
 
             </article>
 
             <style> 
 
-                .cards {
+                #projects {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));;
                 }
 
-                .cards li {
+                #projects li {
                     overflow: hidden;
                     
                     position: relative; 
@@ -212,7 +169,7 @@
                     height: 50vh;
                 }
 
-                .cards li img {
+                #projects li img {
                     height: 100%;
 
                     object-fit: cover;
@@ -220,11 +177,11 @@
                     transition: scale 0.3s ease;
                 }
 
-                .cards li:hover img {
+                #projects li:hover img {
                     scale: 1.02;
                 }
 
-                .cards li .content {
+                #projects li .content {
                     position: absolute; 
                     top: 0;
                     left: 0;
@@ -241,15 +198,15 @@
                     transition: opacity 0.3s ease;
                 }
 
-                .cards li:hover .content {
+                #projects li:hover .content {
                     opacity: 1;
                 }
 
-                .cards li .content * {
+                #projects li .content * {
                     color: white;
                 }
 
-                .cards li .content h5 {
+                #projects li .content h5 {
                     font-size: 1.25em;
                 }
             
@@ -261,7 +218,7 @@
 
                 <div class="content">
                     <p> Hiiii!!!!! im Nate or otherwise known online as Soda!!! I am a fan of music such as Sad with some silly then a little shoegaze, nu metal, Emo, extra skramz some cringe and loser gay core in that order. I play bass guitar not for a band yet tho..... Thank you for stopping by!!!  💥 </p>
-                    <img src="./img/queer.png" alt="homosexual" />
+                    <img src="./img/Misc/queer.png" alt="homosexual" />
                 </div>
 
             </article>
@@ -296,7 +253,7 @@
                         </a>
                     </li>
                     <li> 
-                        <a href="https://www.instagram.com/nater7272/" target="_blank" rel="noopener noreferrer"> 
+                        <a> 
                             <img src="./svg/discord.svg" /> <p> @sodacityy </p>
                         </a>
                     </li>
@@ -329,6 +286,8 @@
             </style>
 
         </main>
+
+        <script type="module" src="/src/main.ts"></script>
         
     </body>
 </html>

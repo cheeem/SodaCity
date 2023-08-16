@@ -1,0 +1,2 @@
+import type { Project } from "./main.ts";
+export default [{"name":"Scramz Patch Desgins","images":["IMG_6100.jpg","IMG_6114.jpg","IMG_6124.png","IMG_6125.jpg"]},{"name":"Slint Shirts","images":["IMG_5984.jpg","IMG_6036.jpg","IMG_6148.jpg","IMG_6149.jpg","IMG_6152.jpg","IMG_6153.jpg"]}] satisfies Project[]
