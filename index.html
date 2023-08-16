@@ -108,6 +108,11 @@
 
                     width: 100%;
                 }
+
+                nav li::after {
+                    bottom: 1.25em;
+                }
+
             }
 
         </style>
@@ -264,13 +269,16 @@
                 }
 
                 @media (max-width: 750px) or (max-aspect-ratio: 10/8) {
+                    
                     #aboutme .content {
                         flex-direction: column;
                         gap: 3em;
                     }
+
                     #aboutme img {
                         width: 100%;
                     }
+
                 }
 
             </style>
